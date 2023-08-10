@@ -20,6 +20,9 @@ import { SiNoPipe } from './pipes/si-no.pipe';
 import { PublicCasePipe } from './pipes/public-case.pipe';
 import { StatusPipe } from './pipes/status.pipe';
 import { ColorStatusPipe } from './pipes/color-status.pipe';
+import { ContainerHomeComponent } from './components/container-home/container-home.component';
+import { ContainerCreateComponent } from './components/container-create/container-create.component';
+import { CreateComponent } from './components/create/create.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { ColorStatusPipe } from './pipes/color-status.pipe';
     PublicCasePipe,
     StatusPipe,
     ColorStatusPipe,
+    ContainerHomeComponent,
+    ContainerCreateComponent,
+    CreateComponent,
   
   ],
   imports: [

@@ -1,0 +1,51 @@
+<div style="width: 65%;
+max-width:600px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 15px;">
+  <h3>Cree sus medicamentos de forma fácil:</h3>
+<form class="form" [formGroup]="form " (ngSubmit)="onSubmit()">
+          
+  <ng-template matStepLabel>Cree un nuevo medicamento de manera fácil!</ng-template>
+  
+  <mat-form-field style="width: 100%;
+  margin-right: 1%;" appearance="outline">
+    <input matInput placeholder="Nombre" type="text" formControlName="name">
+    <mat-error >Debe proporcionar el nombre del medicamento</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  style="width: 100%;
+  margin-right: 1%;"  appearance="outline">
+    <input matInput placeholder="Laboratorio" type="text" formControlName="laboratory">
+    <mat-error >Debe proporcionar el laboratorio</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  style="width: 100%;
+  margin-right: 1%;"  appearance="outline">
+    <input matInput placeholder="Fecha de fabricación" type="date" formControlName="manufacturingdate">
+    <mat-error>Debe proporcionar una fecha de fabricación</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  style="width: 100%;
+  margin-right: 1%;"  appearance="outline">
+    <input matInput placeholder="Fecha de vencimiento" type="date" formControlName="duedate">
+    <mat-error>Debe proporcionar una fecha de vencimiento</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  style="width: 100%;
+  margin-right: 1%;"  appearance="outline">
+    <input matInput placeholder="Cantidad en stock" type="number" formControlName="stock">
+    <mat-error>Debe proporcionar una cantidad en stock</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  style="width: 100%;
+  margin-right: 1%;"  appearance="outline">
+    <input matInput placeholder="Valor por unidad" type="number" formControlName="unitvalue">
+    <mat-error>Debe proporcionar un valor por unidad</mat-error>
+  </mat-form-field>
+  <br>
+  <div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Enviar</button>
+</div>
+</form>
+</div>
