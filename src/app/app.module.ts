@@ -14,6 +14,7 @@ import { SharedModule } from './components/shared/shared.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SiNoPipe } from './pipes/si-no.pipe';
 
+import { DialogSale } from './components/medicines/medicines.component';
 
 
 
@@ -42,6 +43,7 @@ import { MedicinesComponent } from './components/medicines/medicines.component';
     CreateComponent,
     ContainerMedicinesComponent,
     MedicinesComponent,
+    DialogSale
   
   ],
   imports: [

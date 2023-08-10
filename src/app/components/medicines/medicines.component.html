@@ -40,14 +40,14 @@
   <ng-container matColumnDef="Valor /U">
     <th mat-header-cell *matHeaderCellDef>Valor /U</th>
     <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
-      {{element.valueUnit}}
+      {{element.valueUnit | currency }}
     </td>
   </ng-container>
 
   <ng-container matColumnDef="Acciones">
     <th mat-header-cell *matHeaderCellDef></th>
     <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
-      <a  class="pointer"  matTooltip="Comprar"  (click)="sale(element.id)">  <mat-icon>shopping_cart
+      <a  class="pointer"  matTooltip="Comprar"  (click)="sale(element.id, element.name, element.valueUnit)">  <mat-icon>shopping_cart
       </mat-icon></a> 
 
     </td>

@@ -3,6 +3,11 @@
     "target": "http://localhost:8083", 
     "secure": false,
     "changeOrigin": true
+  },
+  "/sales*": {
+    "target": "http://localhost:8084", 
+    "secure": false,
+    "changeOrigin": true
   }
 
 }

@@ -1,0 +1,38 @@
+
+
+<h1  mat-dialog-title><mat-icon style="margin-right: 10px; vertical-align: middle;transform: scale(1.5); color: #455A64;">timer</mat-icon>Ingresa los minutos de tu evaluación</h1>
+
+  <div  mat-dialog-content class="mat-typography" style="align-items: center; text-align: center;">
+    
+    <div class="form"  >
+      
+      <div  style="margin-bottom:10px; white-space: pre-wrap; word-wrap: break-word;">
+        <i style="font-size: 1.2em; ">{{data.name}}</i>
+        <h3>{{data.price  | currency }}</h3>
+      </div>
+    
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          
+          <mat-form-field class="field-full-width" appearance="outline">
+            <mat-label>Ingrese la cantidad de productos</mat-label>
+            <input matInput type="number" formControlName="amount">
+          </mat-form-field>
+          
+          <button mat-raised-button (click)="total()" color="primary" >Facturar</button>
+
+          <div *ngIf="facturar">
+            <h2 style="margin-top:25px"> 
+              Total a pagar: {{totalMedicines*data.price | currency }}
+            </h2>
+            <br>
+            <button mat-raised-button color="warn" type="submit" [disabled]="form.invalid">Comprar</button>
+
+          </div>
+
+        </form>
+        
+    </div>
+   
+
+  </div>
+
