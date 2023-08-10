@@ -1,0 +1,64 @@
+
+<mat-form-field  style="width: 100%; margin-top:1%;">
+  <mat-label>Buscar retos</mat-label>
+  <input matInput (keyup)="applyFilter($event)" #input>
+</mat-form-field>
+<table mat-table  [dataSource]="medicines"  class="mat-elevation-z8" matSort>
+
+
+  <ng-container matColumnDef="Nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td class="table-data-content" style="text-align:left;" mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Laboratorio">
+    <th mat-header-cell *matHeaderCellDef> Laboratorio </th>
+    <td class="table-data-content" style="text-align:left;" mat-cell *matCellDef="let element"> {{element.laboratory}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Fabricacion">
+    <th mat-header-cell *matHeaderCellDef>Fabricación</th>
+    <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
+      {{element.manufacturingDate | date}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Vencimiento">
+    <th mat-header-cell *matHeaderCellDef>Vencimiento</th>
+    <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
+      {{element.dueDate | date}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Stock">
+    <th mat-header-cell *matHeaderCellDef>Stock</th>
+    <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
+      {{element.stock}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Valor /U">
+    <th mat-header-cell *matHeaderCellDef>Valor /U</th>
+    <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
+      {{element.valueUnit}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Acciones">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td class="table-data-content" mat-cell *matCellDef="let element" style="text-align:right;">
+      <a  class="pointer"  matTooltip="Comprar"  (click)="sale(element.id)">  <mat-icon>shopping_cart
+      </mat-icon></a> 
+
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No existen coincidencias para la búsqueda</td>
+  </tr>
+
+</table>
+<mat-paginator  style="width: 100%;bottom: 0px;position: sticky;z-index: 10;" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>

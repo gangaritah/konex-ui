@@ -23,6 +23,8 @@ import { ColorStatusPipe } from './pipes/color-status.pipe';
 import { ContainerHomeComponent } from './components/container-home/container-home.component';
 import { ContainerCreateComponent } from './components/container-create/container-create.component';
 import { CreateComponent } from './components/create/create.component';
+import { ContainerMedicinesComponent } from './components/container-medicines/container-medicines.component';
+import { MedicinesComponent } from './components/medicines/medicines.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { CreateComponent } from './components/create/create.component';
     ContainerHomeComponent,
     ContainerCreateComponent,
     CreateComponent,
+    ContainerMedicinesComponent,
+    MedicinesComponent,
   
   ],
   imports: [
