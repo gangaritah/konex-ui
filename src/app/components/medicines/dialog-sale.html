@@ -1,6 +1,7 @@
 
 
-<h1  mat-dialog-title><mat-icon style="margin-right: 10px; vertical-align: middle;transform: scale(1.5); color: #455A64;">timer</mat-icon>Ingresa los minutos de tu evaluación</h1>
+<h1  mat-dialog-title><mat-icon style="margin-right: 10px; vertical-align: middle;transform: scale(1.5); color: #455A64;">local_shipping
+</mat-icon>Haz tu compra con confianza</h1>
 
   <div  mat-dialog-content class="mat-typography" style="align-items: center; text-align: center;">
     
@@ -18,7 +19,7 @@
             <input matInput type="number" formControlName="amount">
           </mat-form-field>
           
-          <button mat-raised-button (click)="total()" color="primary" >Facturar</button>
+          <button mat-raised-button (click)="total()" color="primary" type="button">Facturar</button>
 
           <div *ngIf="facturar">
             <h2 style="margin-top:25px"> 

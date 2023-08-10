@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+.h{
+
+  max-height: 450px;
+	overflow: auto;
+}
+
+
+.p{
+
+  margin-left: 5%;
+  margin-right: 5%;
+}

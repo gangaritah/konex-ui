@@ -154,6 +154,7 @@ export class DialogSale  implements OnInit{
 
 
     if (this.form.valid) {
+      console.log(88);
       
       this.clientHttp.postRequest(`/sales`, {
         amount: this.form.value.amount,
